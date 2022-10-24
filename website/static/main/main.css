@@ -615,7 +615,12 @@ p a{
         margin-top: -10px;
         margin-left: -14px;
     }
-    
+    .left-navbar{
+        position: fixed;
+        background-color: var(--br);
+        width: 20%;
+        height: 100%;
+    }
 }
 
 @media screen and (min-width: 800px){
@@ -632,10 +637,10 @@ p a{
         overflow: hidden;
         width: 400px;
     }
-}
-.left-navbar{
-    position: fixed;
-    background-color: var(--br);
-    width: 20%;
-    height: 100%;
+    .left-navbar{
+        position: fixed;
+        background-color: var(--br);
+        width: 20%;
+        height: 100%;
+    }
 }
