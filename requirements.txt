@@ -39,7 +39,6 @@ pyreadline==2.1
 pytest==7.1.1
 python-lsp-jsonrpc==1.0.0
 python-lsp-server==1.2.4
-TBB==0.2
 uri-template==1.2.0
 urllib3==1.24.2
 virtualenv==20.16.5
