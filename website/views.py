@@ -7,7 +7,7 @@ from website.__init_ import db
 views = Blueprint('views', __name__)
 
 
-@views.route('/', methods=['GET', 'POST'])
+@views.route('/home', methods=['GET', 'POST'])
 def signals():
     if request.method == 'POST':
         post_content = request.form.get('content')
