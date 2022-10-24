@@ -24,7 +24,6 @@ isoduration==20.11.0
 jsonpointer==2.3
 jsonref==0.2
 llvmlite==0.38.0
-navigator-updater==0.2.1
 pathspec==0.7.0
 patsy==0.5.2
 pep8==1.7.1
