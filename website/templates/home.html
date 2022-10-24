@@ -1,0 +1,61 @@
+{% extends "base.html" %} {% block title %}Home.{%endblock%}
+{% block body %}
+        <!--whole body container-->
+        <div class="authentication">
+          <button class="close-authentication-button" onclick="autCloseFunc()">&times;</button>
+            <span></span>
+            <div class="passage">
+                <h3 class="change1" onclick="changeFunction()">signup</h3>
+                <h3 style="color: rgb(109, 109, 109);" class="change2" onclick="semiFunction()">login</h3>
+            </div>
+            <form action="/signup" method="POST" id="signup" class="signup">
+                  <br>E-mail:
+                <br><input placeholder="   Enter E-mail" type="email" name="email" id="email"><br>
+                Name:
+                <br><input placeholder="   Enter Name" type="text" name="firstName" id="firstName"><br>
+                Password:
+                <br><input placeholder="   Enter Password" type="password" name="password1" id="password1"><br>
+                re-enter:
+                <br><input placeholder="   Re-enter Password" type="password" name="password2" id="password2"><br><br>
+                 {% if user.is_authenticated %}
+                   <button style=" border-radius: 10px;" type="submit" class="btn btn-primary">submit</button>
+                {% endif %}
+              </form>
+             
+            <form action="/login" style="margin-top: 0px;" method="POST" id="login" class="login">
+              E-mail:
+              <br><input placeholder="   Enter E-mail" type="email" name="e-mail" id="e-mail"><br>
+              Name:
+              <br><input placeholder="   Enter Name" type="text" name="first-name" id="first-name"><br>
+              Password:
+              <br><input placeholder="   Enter Password" type="password" name="password" id="password"><br><br>
+              <button style=" border-radius: 10px;" type="submit" class="btn btn-primary">submit</button>
+            </form>
+            <div class="authentication-button-2">
+              <a href="/logout"><ion-icon name="log-out"></ion-icon></a></div>    
+        </div>
+        <div id="logout" class="authentication-button">
+            <button onclick="myFunction()"><ion-icon name="log-in"></ion-icon></button>
+        </div>
+      <div align="right" class="type">
+        <ul class="list-group list-group-flush" id="notes">
+          {% for post in all_post %}
+          <li class="list-group-item">
+            {{ post.content }}
+          </li>
+           {% if user.is_authenticated %}
+            <a style="z-index:100; cursor:pointer;" href='/posts/delete/{{post.id}}'><ion-icon name="trash"></ion-icon></a>
+            {% endif %}
+          {% endfor %}
+
+        </ul>
+           {% if user.is_authenticated %}
+                <form action="/" method="POST">
+                  <textarea class="text-area" name='content' id="content" placeholder="Enter Content" aria-label="Enter Content" ></textarea>
+                  <div align="center">
+                    <button  style="margin-top: 580px;" type="submit" class="btn btn-primary"><ion-icon name="send"></ion-icon></button>
+                  </div>
+                </form>
+          {% endif %}
+      </div>
+{% endblock %}

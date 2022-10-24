@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: rgb(79, 79, 79);
+}
+li{
+    list-style: none;
+}
+button{
+    cursor: pointer;
+}
+input{
+    border: 0px;
+    outline: none;
+    border-radius: 10px;
+    width: 50%;
+    padding: 0px 7px;
+    background-color: rgba(255, 255, 255, 0.481);
+    box-shadow: 0 5px 5px rgba(0,0,0,.2);
+}
+a{
+    text-decoration: none;
+    color: white;
+    z-index: 100;
+}
+.nav-bar{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    z-index: 99;
+    background-color: rgb(79, 79, 79);
+    position: fixed;
+    box-shadow: 0 5px 5px rgba(0,0,0,.2);
+    justify-content: space-between;
+}
+.nav-bar img{
+    margin-left: 20px;
+    margin-top: 35px;
+    background-color: rgba(255, 255, 255, 0.977);
+    box-shadow: 0 5px 5px rgba(0,0,0,.2);
+    border-radius: 20px;
+}
+.nav-text ul{
+    background-color: rgb(255, 255, 255, .1);
+    box-shadow: 0 5px 5px rgba(0,0,0,.2);
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+}
+.nav-text ul li{
+    margin: 10px;
+}
+.nav-text input{
+    position: relative;
+    left: -250px;
+    width: auto;
+    outline: none;
+    padding: 14px 20px;
+    top: 45px;
+    border-radius: 20px;
+    background-color: rgb(144, 144, 144);
+    border: transparent;
+}
+.left-side div{
+    position: fixed;
+    margin-top: 600px;
+    margin-left: 100px;
+}
+.left-side div form textarea{
+    border: 0px;
+    outline: none;
+    border-radius: 30px;
+    padding-top: 19px;
+    padding-left: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.left-side div form button{
+     padding-top: 10px;
+     padding-bottom: 7px;
+     padding-left: 10px;
+     padding-right: 7px;
+    border-radius: 30px;
+    background-color: rgb(11, 158, 1);
+    position: relative;
+    bottom: 18px;
+    border: none;
+    color: white;
+    width: 70px;
+    font-size: 1.5em;
+    outline: none;
+}
+.authentication{
+    position: fixed;
+    z-index: 100;
+    padding: 50px 50px 0px 50px;
+    background-color: white;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.587);
+    height: 90%;
+    width: auto;
+    border-radius: 20px;
+    margin-left: 1000px;
+    display: none;
+}
+button{
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    outline: none;
+}
+.authentication form:first-child {
+    position: relative;
+}
+.authentication form:last-child{
+    position: relative;
+     
+}
+.login{
+    display: none;
+    margin-top: 150px;
+}
+.authentication form input{
+    padding: 14px 20px;
+    width: 200px;
+}
+.passage{
+    display: flex;
+    justify-content: space-between;
+}
+.passage h3{
+    font-weight: 900;
+    font-size: 1.5em;
+    margin: 5px 5px 50px 5px;
+    cursor: pointer;
+    border: 0px 0px 2px 0px solid black ;
+}
+.authentication-button{
+    z-index: 100;
+    position: fixed;
+    margin-top: 500px;
+    margin-left: 1250px;
+}
+.authentication-button button{
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.291);
+}
+.authentication-button button:hover{
+    color: white;
+}
+.authentication-button-2 a{
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    font-size: 30px;
+    color: #00000072;
+    cursor: pointer;
+    margin-left: 170px;
+    margin-top: -48px;
+}
+
+.left-side ul{
+    position: absolute;
+    z-index: 100;
+    display: block;
+    margin-top: 500px;
+    margin-left: 300px;
+}
+.left-side ul li{
+    background-color: white;
+    padding: 10px;
+    color: #fff;
+}
+.alert-success .alert-danger{
+    position: fixed;
+    z-index: 100;
+    width: 50%;
+    color: white;
+    justify-content: space-between;
+    display: none;
+}
+.alert-success {
+    background-color: rgb(130, 250, 130);
+}
+.alert-danger{
+    background-color: rgb(248, 110, 110);
+}
+.type{
+    position: absolute;
+    margin-left: 150px;
+}
+.type form{
+    display: flex;
+    position: fixed;
+}
+.type form textarea{
+    width: 1000px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 7px 30px;
+    margin-top: auto;
+    resize: none;
+}
+.type form div button{
+    border-radius: 30%;
+    padding: 20px;
+}
+.type ul{
+    display: grid;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 500px;
+}
+.close-authentication-button{
+    background-color: transparent;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+.type ul li{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0,0,0,.2);
+    margin: 20px;
+    padding: 30px;
+    width: 800px;
+}
+.type ul li button{
+    background-color: transparent;
+}
+textarea:is(:focus, :valid){
+    border-color: blue;
+}
+textarea::-webkit-scrolbar{
+    width: 0px;
+}
+.close{
+    background-color: transparent;
+    width: auto;
+    text-align: left;
+}
+.list-group-item{
+    text-align: right;
+}
+.list-group li::after{
+    content: "";
+    position: absolute;
+    border-top: 20px solid rgb(255, 255, 255);
+    border-left: 20px solid transparent;
+    border-radius: 4px 0 0 0px;
+    width: 0;
+    height: 0;
+    padding: 2px;
+    margin-top: -30px;
+    margin-left: 6px;
+}
+.list-group li:last-child():after{
+    content: "";
+    position: absolute;
+    border-top: 20px solid rgb(255, 255, 255);
+    border-left: 20px solid transparent;
+    border-radius: 4px 0 0 0px;
+    width: 0;
+    height: 0;
+    padding: 2px;
+    margin-top: -10px;
+    margin-left: -14px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;0,900;1,600&family=Poppins:wght@300;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --br:rgb(70, 70, 70);
+    --white: rgb(255, 255, 255);
+    --green: green;
+    --black: black;
+}
+p{
+    font-weight: 600;
+}
+button{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+body{
+    font-family: 'poppins', sans-serif;
+   
+}
+.left-navbar{
+    position: fixed;
+    background-color: var(--br);
+    width: 11%;
+    height: 100%;
+}
+nav ul{
+    background-color: var(--br);
+    margin-top: 200px;
+}
+nav ul li{
+    margin: 20px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+nav ul li a{
+    color: var(--white);
+}
+.banner{
+    position: absolute;
+    display: flex;
+    margin-top: 150px;
+}
+.banner-text{
+    position: relative;
+    top: 70px;
+    width: 500px;
+    left: 200px;
+    text-align: center;
+}
+.banner-img{
+    position: relative;
+    left: 300px;
+    bottom: 50px;
+}
+
+p a{
+    color: var(--br);
+    font-weight: 900;
+}
+ .banner-text button a{
+    color: var(--black);
+ }
+ .banner-img img{
+    animation: mymove 3s infinite;
+    position: relative;
+ }
+ @keyframes mymove {
+    0%   {top: 0px;}
+    25%  {top: 20px;}
+    50%  {top: 10px;}
+    75%  {top: 20px;}
+    100% {top: 0px;}
+  }
+  
+ .banner-text h1{
+    color: green;
+}
+@media screen and (max-width: 700px){
+    .nav-bar{
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        z-index: 99;
+        background-color: rgb(79, 79, 79);
+        position: fixed;
+        box-shadow: 0 5px 5px rgba(0,0,0,.2);
+    }
+    .nav-bar img{
+        margin-left: 20px;
+        margin-top: -0.5px;
+        width: 50%;
+        background-color: rgba(255, 255, 255, 0.977);
+        box-shadow: 0 5px 5px rgba(0,0,0,.2);
+        border-radius: 20px;
+    }
+    .nav-text ul{
+        background-color: rgb(255, 255, 255, .1);
+        box-shadow: 0 5px 5px rgba(0,0,0,.2);
+        border-radius: 20px;
+        padding: 10px;
+        position: relative;
+        display: flex;
+    }
+    .nav-text ul li{
+        margin: 10px;
+        font-size: 0.5em;
+    }
+    .nav-text input{
+        position: relative;
+        left: -250px;
+        width: auto;
+        outline: none;
+        padding: 14px 20px;
+        top: 45px;
+        border-radius: 20px;
+        background-color: rgb(144, 144, 144);
+        border: transparent;
+        display: none;
+    }
+    .right-side{
+        position: absolute;
+        margin-left: 870px;
+        display: none;
+    }
+    .right-side div ul{
+        margin: 50px;
+        margin-top: 170px;
+        padding: 50px;
+        border-radius: 30px;
+        justify-content: right;
+        margin-left: 350px;
+        width: 70%;
+    }
+    .right-side div ul li{
+        margin: 5px;
+        position: relative;
+        background-color: rgb(255, 255, 255);
+        color: rgb(34, 34, 34);
+        box-shadow: 0 5px 5px rgba(0,0,0,.2);
+    } 
+    .left-side div{
+        position: fixed;
+        margin-top: 600px;
+        margin-left: 100px;
+    }
+    .left-side div form textarea{
+        border: 0px;
+        outline: none;
+        border-radius: 30px;
+        padding-top: 19px;
+        padding-left: 20px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .left-side div form button{
+         padding-top: 10px;
+         padding-bottom: 7px;
+         padding-left: 10px;
+         padding-right: 7px;
+        border-radius: 30px;
+        background-color: rgb(11, 158, 1);
+        position: relative;
+        bottom: 18px;
+        border: none;
+        color: white;
+        width: 70px;
+        font-size: 1.5em;
+        outline: none;
+    }
+    .authentication{
+        position: fixed;
+        z-index: 100;
+        padding: 50px 50px 0px 50px;
+        background-color: white;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.587);
+        height: 60%;
+        width: auto;
+        margin-left: 2px;
+        border-radius: 20px;
+        display: none;
+    }
+    button{
+        padding: 10px;
+        background-color: green;
+        color: white;
+        border: none;
+        outline: none;
+    }
+    .authentication form:first-child {
+        position: relative;
+    }
+    .authentication form:last-child{
+        position: relative;
+         
+    }
+    .login{
+        display: none;
+        margin-top: 150px;
+    }
+    .authentication form input{
+        padding: 14px 20px;
+        width: 200px;
+        z-index: 100;
+    }
+    .passage{
+        display: flex;
+        justify-content: space-between;
+    }
+    .passage h3{
+        font-weight: 900;
+        font-size: 1.5em;
+        margin: 5px 5px 50px 5px;
+        cursor: pointer;
+        border: 0px 0px 2px 0px solid black ;
+    }
+    .authentication-button{
+        z-index: 100;
+        position: fixed;
+        margin-top: 500px;
+        margin-left: auto ;
+    }
+    .authentication-button button{
+        background-color: transparent;
+        border-radius: 50%;
+        padding: 10px;
+        font-size: 30px;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.072);
+    }
+    .authentication-button button:hover{
+        color: white;
+    }
+    .authentication-button-2 a{
+        background-color: transparent;
+        border-radius: 50%;
+        padding: 10px;
+        position: absolute;
+        font-size: 30px;
+        color: #00000072;
+        cursor: pointer;
+        margin-left: 170px;
+        margin-top: -48px;
+    }
+    
+    .left-side ul{
+        position: absolute;
+        z-index: 100;
+        display: block;
+        margin-top: 500px;
+        margin-right: auto  ;
+    }
+    .left-side ul li{
+        background-color: white;
+        padding: 20px;
+        color: #fff;
+    }
+    .type{
+        position: absolute;
+        margin-left: 130px;
+    }
+    .type form{
+        display: flex;
+        position: fixed;
+    }
+    .type form textarea{
+        width: 320px;
+        position: relative;
+        right: 130px;
+        top: 20px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        padding: 7px 30px;
+        margin-top: auto;
+        resize: none;
+    }
+    .type form div button{
+        position: relative;
+        right: 130px;
+        top: 20px;
+        border-radius: 30%;
+        padding: 20px;
+    }
+    .type ul{
+        display: grid;
+        position: absolute;
+        margin-top: 100px;
+        margin-left: auto;
+        text-align: center;
+    }
+    .close-authentication-button{
+        background-color: transparent;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+    .type ul li{
+        position: relative;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        box-shadow: 0 5px 5px rgba(0,0,0,.2);
+        padding: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 200px;
+    }
+    .type ul a{
+        position: relative;
+        text-align: right;
+        margin-right: 10px;
+    }
+    .list-group li::after{
+        content: "";
+        position: absolute;
+        border-top: 20px solid rgb(255, 255, 255);
+        border-left: 20px solid transparent;
+        border-radius: 4px 0 0 0px;
+        width: 0;
+        height: 0;
+        padding: 2px;
+        margin-top: -10px;
+        margin-left: -14px;
+    }
+    
+}
+
+@media screen and (min-width: 800px){
+    .type ul{
+        margin-right: -300px;
+    }
+    .type ul li{
+        position: relative;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        box-shadow: 0 5px 5px rgba(0,0,0,.2);
+        padding: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 400px;
+    }
+}
+.left-navbar{
+    position: fixed;
+    background-color: var(--br);
+    width: 20%;
+    height: 100%;
+}

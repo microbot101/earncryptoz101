@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='main/main.css') }}">
+    <title>{% block title %}Home{% endblock %}</title>
+</head>  
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %} {% if category ==
+        'error' %}
+        <div class="alert alert-danger alter-dismissable fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alter-dismissable fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endif %} {% endfor %} {% endif %} {% endwith %}
+    <div class="container">
+        {% block body %}
+
+        {% endblock %}
+    </div>
+    <div class="nav-bar">
+      <img width="20%" height="20%" src="{{ url_for('static', filename='images/logo.png') }}" alt="Encryptoz">
+      <div class="nav-text">
+          <input placeholder="Search" type="text">
+          <ul>
+              <li><a href="https://t.me/earncryptozsignals"><ion-icon name="paper-plane"></ion-icon></a></li>
+              <li><a href="https://mobile.twitter.com/EarnCryptoz"><ion-icon name="logo-twitter"></ion-icon></a></li>
+              <li><a href="https://youtube.com/channel/UCpKB3l4hUlOUhoo8NrHidzg"><ion-icon name="logo-youtube"></ion-icon></a></li>
+              <li><a href="https://www.facebook.com/earncryptoz/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          </ul>
+      </div>
+  </div>
+    <nav class="left-navbar">
+      <ul>
+          <li><a href="/banner"><ion-icon name="home"></ion-icon> Home</a></li>
+          <li><a href="/"><ion-icon name="chatbubbles"></ion-icon>Blog</a></li>
+      </ul>
+  </nav>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script href="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/jquery.ScrollMagic.min.js" integrity="sha512-RoCOXSeYXosX4PjvRhUz0X+pmdhOJJkbjYZzmZ9dS1Iy9E/WnkTqMy+LVkPX3BV0ZgSFB2AYQKfi6ZKdNdXJnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js" integrity="sha512-mq6TSOBEH8eoYFBvyDQOQf63xgTeAk7ps+MHGLWZ6Byz0BqQzrP+3GIgYL+KvLaWgpL8XgDVbIRYQeLa3Vqu6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>
