@@ -13,9 +13,6 @@ certifi==2021.10.8
 comtypes==1.1.10
 constantly==15.1.0
 cssselect==1.1.0
-datashape==0.5.4
-distlib==0.3.6
-et-xmlfile==1.1.0
 Flask-Login==0.6.2
 Flask-Migrate==3.1.0
 Flask-SQLAlchemy==2.5.1
