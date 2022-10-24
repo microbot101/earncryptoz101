@@ -637,10 +637,4 @@ p a{
         overflow: hidden;
         width: 400px;
     }
-    .left-navbar{
-        position: fixed;
-        background-color: var(--br);
-        width: 20%;
-        height: 100%;
-    }
 }
