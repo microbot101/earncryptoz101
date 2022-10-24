@@ -11,9 +11,6 @@ Bybit==0.2.12
 bybit-ws==0.1.8
 certifi==2021.10.8
 comtypes==1.1.10
-conda==4.12.0
-conda-build==3.21.8
-conda-verify==3.4.2
 constantly==15.1.0
 cssselect==1.1.0
 cytoolz==0.11.0
